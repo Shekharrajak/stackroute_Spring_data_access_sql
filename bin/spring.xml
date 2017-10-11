@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+           
+   <context:annotation-config/>
+   <context:component-scan base-package="com.testing.java" />
+   
+   <!-- A bean definition with destruction method -->
+   <bean id = "jdbcDaoImpl" class = "com.testing.java.dao.JdbcDaoImpl">
+   		<property name="dataSource" ref="dataSource"></property>
+   </bean>
+
+   <!-- more bean definitions go here -->
+   <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+   		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+   		<property name="url" value="jdbc:mysql://localhost:3306/test_db"></property>
+   		<property name="username" value="root"></property>
+   		<property name="password" value="om."></property>
+   </bean>
+   
+   <bean id="circle" class="com.testing.java.Circle">
+    <constructor-arg index="0" type = "java.lang.Integer" name="id" value="0"/>
+    <constructor-arg index="1" type = "java.lang.String" name="name" value=""/>
+   </bean>
+   
+
+   
+</beans>
