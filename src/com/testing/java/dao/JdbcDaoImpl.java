@@ -31,8 +31,8 @@ public class JdbcDaoImpl {
 		this.jdbcTemplateObject = new JdbcTemplate(this.dataSource);
 	}
 	
-	public  void insertCircle(List<Circle> clist) {
-		String sql = "insert into Circle(id, name) values(:id, :name)";
+	public void insertCircle(final List<Circle> clist) {
+		String sql = "insert into Circle(id, name) values(?, ?)";
 		
 		List<Map<String, Object>> batchValues = new ArrayList<>(clist.size());
 		
@@ -55,6 +55,7 @@ public class JdbcDaoImpl {
 
 			@Override
 			public void setValues(java.sql.PreparedStatement ps, int i) throws SQLException {
+				// starts with 1
 				ps.setInt(1, clist.get(i).getId());
 		        ps.setString(2, clist.get(i).getName());
 				
@@ -63,7 +64,7 @@ public class JdbcDaoImpl {
 	}
 	public List<Circle> getCircle() {
 		String sql = "select * from Circle";
-		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+//		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 		List<Circle> clist = jdbcTemplateObject.query(sql, new BeanPropertyRowMapper(Circle.class));	
 //		List<Circle> clist = jdbcTemplateObject.query(sql, new BeanPropertyRowMapper(
 //					ctx.getBean("circle").getClass()

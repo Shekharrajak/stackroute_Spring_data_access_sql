@@ -1,7 +1,9 @@
 package com.testing.java;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 
+@Scope("prototype")
 public class Circle {
 	private Integer id;
 	private String name;
@@ -23,6 +25,10 @@ public class Circle {
 		super();
 		this.id = id;
 		this.name = name;
+	}
+	
+	public static Circle createInstance(Integer id, String name) {
+		return (new Circle(id, name));
 	}
 	
 	
