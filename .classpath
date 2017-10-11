@@ -46,5 +46,17 @@
 	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/commons-logging-1.2/commons-logging-1.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/commons-logging-1.2/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/spring-hibernate-1.2.9.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/spring-orm.jar/spring-orm.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/javax.persistence.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/hibernate-annotations-sources.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/hibernate-commons-annotations-4.0.2.Final.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/com.springsource.org.hibernate.annotations-3.3.0.ga.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/javax.transaction.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/dom4j.jar/dom4j.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/jboss-logging.jar/jboss-logging.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/org.apache.commons.collections.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/com.springsource.net.sf.cglib-2.2.0.jar"/>
+	<classpathentry kind="lib" path="/home/shekharrajak/Downloads/antlr.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

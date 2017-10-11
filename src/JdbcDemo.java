@@ -6,10 +6,12 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.testing.java.Circle;
+import com.testing.java.dao.HibernateDao;
 import com.testing.java.dao.JdbcDaoImpl;
 
 public class JdbcDemo {
 	public static void main(String args[]) {
+		/*
 		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 		JdbcDaoImpl jdbc = ctx.getBean("jdbcDaoImpl", JdbcDaoImpl.class);
 		List<Circle> clist = jdbc.getCircle();
@@ -32,5 +34,12 @@ public class JdbcDemo {
 			System.out.println(c.getName() );
 		}
 		
+		*/
+
+		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+		HibernateDao jdbc = ctx.getBean("hibernateDao", HibernateDao.class);
+		int count = jdbc.getCircleCount();
+		System.out.println("I am running ...");
+		System.out.println(count);
 	}
 }
